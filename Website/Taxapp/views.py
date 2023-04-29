@@ -14,5 +14,5 @@ def newPrice(request,number):
     return HttpResponse(f'Price after tax {number}')
 
 def taxrate(request):
-    return render(request,"Taxapp/display.html",{"taxRate":str(taxRate)})
+    return render(request,"Taxapp/display.html",{"taxRate":taxRate*100})
 
